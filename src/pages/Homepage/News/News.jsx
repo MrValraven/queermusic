@@ -14,7 +14,7 @@ const newsData = [
     },
     {
         image: "https://www.udiscovermusic.com/wp-content/uploads/2021/06/LGBTQ-Women-in-Music-history.jpg",
-        title: "The Evolution of Queer Representation in Music",
+        title: "The History of Queer Representation in Music",
         description: "A look back at how queer artists have changed the face of music over the past decade."
     }
 ];
