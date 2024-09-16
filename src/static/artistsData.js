@@ -68,7 +68,7 @@ const artists = [
     musicalGenres: ["Pop"],
     bio: "Artista, compositor, ator e bailarino. Performer.",
     imageGallery: [JudasPhoto1, JudasPhoto2, JudasPhoto3],
-    video: "https://www.youtube.com/embed/dDJS3S1aEVg?si=5vPxGcZQI4Mt4oZA",
+    video: "https://www.youtube.com/embed/M3vTHgF9b20?si=y-Ef5NVuEsHk0vON",
     socialMedia: {
       instagram: "https://www.instagram.com/judas8200",
       tiktok: "www.tiktok.com/@judas8200",

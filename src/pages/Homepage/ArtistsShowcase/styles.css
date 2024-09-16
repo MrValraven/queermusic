@@ -17,13 +17,14 @@
 
 .artist-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .artist-card {
   position: relative;
   overflow: hidden;
+  height: 500px;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;

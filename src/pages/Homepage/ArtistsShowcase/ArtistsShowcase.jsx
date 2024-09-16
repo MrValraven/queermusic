@@ -1,5 +1,8 @@
 import { useState, useRef } from "react";
 import "./styles.css";
+import artistData from '../../../static/artistsData.js';
+import { truncateText } from '../../../utils.js';
+
 
 const images = [
     "https://aurn.com/wp-content/uploads/2020/06/2.png",
@@ -35,14 +38,14 @@ const ArtistShowcase = () => {
     const handleMouseEnter = (index) => {
         setHoverIndex(index);
         if (iframeRefs.current[index]) {
-            iframeRefs.current[index].src = `${artistsData[index].video}?autoplay=1&controls=0`;
+            iframeRefs.current[index].src = `${artistData[index].video}?autoplay=1&controls=0`;
         }
     };
 
     const handleMouseLeave = (index) => {
         setHoverIndex(null);
         if (iframeRefs.current[index]) {
-            iframeRefs.current[index].src = `${artistsData[index].video}?controls=0`;
+            iframeRefs.current[index].src = `${artistData[index].video}?controls=0`;
         }
     };
 
@@ -50,14 +53,14 @@ const ArtistShowcase = () => {
         <div className="artist-section">
             <h2 className="artist-heading">Queer Artists</h2>
             <div className="artist-grid">
-                {artistsData.map((artist, index) => (
+                {artistData.map((artist, index) => (
                     <div
                         className="artist-card"
                         key={index}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave(index)}
                     >
-                        <img src={artist.image} alt={artist.name} className="artist-image" />
+                        <img src={artist.imageGallery[2]} alt={artist.stageName} className="artist-image" />
                         <iframe
                             ref={(el) => (iframeRefs.current[index] = el)}
                             src={`${artist.video}?controls=0&mute=1`} // Initial state without autoplay
@@ -68,10 +71,10 @@ const ArtistShowcase = () => {
                         />
                         <div className="artist-overlay">
                             <div className="artist-info">
-                                <h3 className="artist-name">{artist.name}</h3>
+                                <h3 className="artist-name">{artist.stageName}</h3>
                                 <div className="artist-genres">
-                                    {artist.genre.length > 0 ? (
-                                        artist.genre.map((g, i) => (
+                                    {artist.musicalGenres.length > 0 ? (
+                                        artist.musicalGenres.map((g, i) => (
                                             <a href={`/genres/${g.toLowerCase()}`} key={i} className="artist-genre-link">
                                                 {g}
                                             </a>
@@ -80,7 +83,7 @@ const ArtistShowcase = () => {
                                         <p className="no-genres">No genre listed</p>
                                     )}
                                 </div>
-                                <p className="artist-description">{artist.description}</p>
+                                <p className="artist-description">{truncateText(artist.bio)}</p>
                             </div>
                         </div>
                     </div>
