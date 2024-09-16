@@ -8,11 +8,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import ArtistPage from './pages/ArtistPage/ArtistPage.jsx';
+import OurArtists from './pages/OurArtists/OurArtists.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/artists",
+    element: <OurArtists />,
+  },
+  {
+    path: "/artists/:artistName",
+    element: <ArtistPage />,
   },
 ]);
 

@@ -1,0 +1,221 @@
+/* General Page Styling */
+.artist-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ff69b4;
+  display: inline-block;
+}
+
+/* Header Section */
+.artist-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-color: #111;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.artist-header-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.artist-header-content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.artist-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.artist-header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Bio Section */
+.artist-bio {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.artist-bio p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Gallery Section */
+.artist-gallery {
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Video Section */
+.artist-video {
+  margin-bottom: 40px;
+}
+
+.artist-video iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Social Media Section */
+.artist-socials {
+  margin-bottom: 40px;
+}
+
+.artist-socials ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.artist-socials li {
+  background-color: #ff69b4;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.artist-socials li a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.artist-socials li:hover {
+  background-color: #ff4081;
+}
+
+/* Awards Section */
+.artist-awards {
+  margin-bottom: 40px;
+}
+
+.artist-awards ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.artist-awards li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Clipping Section */
+.artist-clipping {
+  margin-bottom: 40px;
+}
+
+.artist-clipping ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.artist-clipping li {
+  margin: 10px 0;
+}
+
+.artist-clipping a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.artist-clipping a:hover {
+  color: #ff4081;
+}
+
+/* Manager, Booking, and Label Section */
+.artist-management {
+  margin-bottom: 40px;
+}
+
+.artist-management p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.artist-management strong {
+  color: #111;
+}
+
+/* Events Section */
+.artist-events {
+  margin-bottom: 40px;
+}
+
+.artist-events ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.artist-events li {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.artist-events li p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.artist-events li p strong {
+  color: #ff69b4;
+}
