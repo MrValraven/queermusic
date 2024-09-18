@@ -1,4 +1,4 @@
-const MAX_NUMBER_OF_CHARS_IN_ARTIST_BIO = 180;
+const MAX_NUMBER_OF_CHARS_IN_ARTIST_BIO = 160;
 function truncateText(text, maxLength = MAX_NUMBER_OF_CHARS_IN_ARTIST_BIO) {
   if (text.length <= maxLength) {
     return text;

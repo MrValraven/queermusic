@@ -15,7 +15,7 @@ const ArtistPage = () => {
             <div className="artist-page">
                 {/* Header Section with Image, Name and Pronouns */}
                 <header className="artist-header">
-                    <img src={artist.imageGallery[2]} alt={`${artist.stageName}`} className="artist-header-image" />
+                    <img src={artist.imageGallery[0]} alt={`${artist.stageName}`} className="artist-header-image" />
                     <div className="artist-header-content">
                         <h1>{artist.stageName}</h1>
                         <p>Pronomes: {artist.pronouns}</p>
@@ -42,7 +42,7 @@ const ArtistPage = () => {
                 <section className="artist-video">
                     <h2>Vídeo</h2>
                     <iframe
-                        src={`${artist.video}?autoplay=0&controls=0`}
+                        src={`${artist.video}?controls=1`}
                         title="Artist Video"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -54,12 +54,12 @@ const ArtistPage = () => {
                 <section className="artist-socials">
                     <h2>Redes Sociais</h2>
                     <ul>
-                        <li><a href={artist.socialMedia.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href={artist.socialMedia.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a></li>
-                        <li><a href={artist.socialMedia.youtube} target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                        <li><a href={artist.socialMedia.spotify} target="_blank" rel="noopener noreferrer">Spotify</a></li>
-                        <li><a href={artist.socialMedia.appleMusic} target="_blank" rel="noopener noreferrer">Apple Music</a></li>
-                        <li><a href={artist.socialMedia.soundcloud} target="_blank" rel="noopener noreferrer">SoundCloud</a></li>
+                        {artist.socialMedia.instagram && <li><a href={artist.socialMedia.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></li>}
+                        {artist.socialMedia.tiktok && <li><a href={artist.socialMedia.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a></li>}
+                        {artist.socialMedia.youtube && <li><a href={artist.socialMedia.youtube} target="_blank" rel="noopener noreferrer">YouTube</a></li>}
+                        {artist.socialMedia.spotify && <li><a href={artist.socialMedia.spotify} target="_blank" rel="noopener noreferrer">Spotify</a></li>}
+                        {artist.socialMedia.appleMusic && <li><a href={artist.socialMedia.appleMusic} target="_blank" rel="noopener noreferrer">Apple Music</a></li>}
+                        {artist.socialMedia.soundcloud && <li><a href={artist.socialMedia.soundcloud} target="_blank" rel="noopener noreferrer">SoundCloud</a></li>}
                     </ul>
                 </section>
 

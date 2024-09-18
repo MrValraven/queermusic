@@ -20,7 +20,7 @@ const OurArtists = () => {
                         <div className="artist-card" key={artist.stageName}>
                             <Link to={`/artists/${artist.stageName.toLowerCase()}`} className="artist-link">
                                 <div className="artist-image-container">
-                                    <img src={artist.imageGallery[2]} alt={artist.stageName} className="our-artist-image" />
+                                    <img src={artist.imageGallery[0]} alt={artist.stageName} className="our-artist-image" />
                                     <div className="artist-overlay">
                                         <div className="artist-details">
                                             <h3>{artist.stageName}</h3>

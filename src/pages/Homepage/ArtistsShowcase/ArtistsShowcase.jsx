@@ -38,7 +38,7 @@ const ArtistShowcase = () => {
     const handleMouseEnter = (index) => {
         setHoverIndex(index);
         if (iframeRefs.current[index]) {
-            iframeRefs.current[index].src = `${artistData[index].video}?autoplay=1&controls=0`;
+            iframeRefs.current[index].src = `${artistData[index].video}?autoplay=1&controls=1`;
         }
     };
 
@@ -60,13 +60,13 @@ const ArtistShowcase = () => {
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave(index)}
                     >
-                        <img src={artist.imageGallery[2]} alt={artist.stageName} className="artist-image" />
+                        <img src={artist.imageGallery[0]} alt={artist.stageName} className="artist-image" />
                         <iframe
                             ref={(el) => (iframeRefs.current[index] = el)}
-                            src={`${artist.video}?controls=0&mute=1`} // Initial state without autoplay
+                            src={`${artist.video}?autoplay=1&controls=0&mute=1`} // Initial state without autoplay
                             className="artist-video"
                             frameBorder="0"
-                            allow="autoplay; fullscreen"
+                            allow="autoplay"
                             allowFullScreen
                         />
                         <div className="artist-overlay">
